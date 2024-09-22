@@ -1,149 +1,108 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1999 Google Web Interface</title>
+    <title>1998 Google! BETA</title>
+       
+    <!-- CSS Content -->
     <style>
+        /* General body styling */
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: white;
-        }
-
-        h1 {
-            font-size: 48px;
-            color: #0000cc;
-            margin-top: 50px;
+            margin: 0px; /* Remove default margin */
+            font-size: 0.9rem; /* Set base font size */
+            text-align: center; /* Center align everything*/
         }
 
         .logo {
-            color: #0000cc;
-            font-weight: bold;
+            width: 27%; /* Set width of the logo */
         }
 
-        .logo .g {
-            color: #008000;
+        /* Search form styling */
+        .form {
+            background-color: #eeeeee; /* Light gray background for form */
+            padding-bottom: 1rem; /* Space below the form */
+            margin: 0px; /* Remove default margin */
         }
 
-        .logo .o1 {
-            color: #ff0000;
+        .heading {
+            margin: 0px; /* Remove margin for the heading */
         }
 
-        .logo .o2 {
-            color: #ffcc00;
+        .table {
+            width: 100%; /* Full width for the table */
+        }
+  
+        a {
+            color: blue; /* Set link color to blue */
         }
 
-        .logo .l {
-            color: #008000;
+        /* Column styling */
+        .column1, .column2, .column3 {
+            width: 33%; /* Each column takes up a third of the table */
+        }
+        .column1 {
+            background-color: #7ce4db; /* Light blue background for column 1 */
+        }
+        .column2 {
+            background-color: #71cdc1; /* Teal background for column 2 */
+        }
+        .column3 {
+            background-color: #62b3aa; /* Darker teal for column 3 */
         }
 
-        .logo .e {
-            color: #ff0000;
+        input[type="submit"] { 
+            font-size: 12px; /* Set font size for buttons */
         }
 
-        .beta {
-            font-size: 20px;
-            color: #ff0000;
-            vertical-align: super;
-        }
-
-        #search-box {
-            margin-top: 20px;
-        }
-
-        input[type="text"] {
-            padding: 5px;
-            width: 400px;
-        }
-
-        input[type="submit"] {
-            padding: 5px 10px;
-            margin-left: 10px;
-        }
-
-        #links {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            gap: 20px;
-        }
-
-        .column {
-            background-color: #e0f7f9;
-            padding: 10px;
-            width: 20;
-        }
-
-        .column a {
-            display: block;
-            margin: 5px 0;
-            color: #0000cc;
-            text-decoration: none;
-        }
-
-        .column a:hover {
-            text-decoration: underline;
-        }
-
-        #subscribe {
-            margin-top: 20px;
-        }
-
-        #subscribe input[type="email"] {
-            padding: 5px;
-            width: 200px;
-        }
-
-        footer {
-            margin-top: 40px;
-            font-size: 12px;
+        input[type="text"] { 
+            font-size: 12px; /* Set font size for search prompts */
         }
     </style>
 </head>
 <body>
+    <!-- Main container for centering content -->
+    <div class="main_container">
+        <!-- Google logo -->
+        <img class="logo" src="\images\logo.webp" alt="1998 Google BETA Logo">
+       
+        <!-- Search form for user input -->
+        <form class="form" action="#" method="get">
+            <p class="heading">Search the web using Google!</p> <!-- Search prompt -->
+            <input type="text" name="q" size="45"><br> <!-- Text input for search query -->
 
-    <h1 class="logo">
-        <span class="g">G</span><span class="o1">o</span><span class="o2">o</span><span class="g">g</span><span class="l">l</span><span class="e">e</span>
-        <span class="beta">BETA</span>
-    </h1>
+            <!-- Buttons for form submission -->
+            <input type="submit" value="Google Search"> <!-- Button for Google search -->
+            <input type="submit" name="lucky" value="I'm feeling lucky"><br> <!-- Button for "I'm Feeling Lucky" -->
+        </form>
 
-    <div id="search-box">
-        <input type="text" placeholder="Search the web using Google!">
-        <input type="submit" value="Google Search">
-        <input type="submit" value="I'm Feeling Lucky">
+        <!-- Special searches and links section -->
+        <table class="table">
+            <tr>
+                <td class="column1">
+                    Special Searches<br>
+                    <a href="#">Stanford Search</a><br> <!-- Link to Stanford search -->
+                    <a href="#">Linux Search</a> <!-- Link to Linux search -->
+                </td>
+                <td class="column2">
+                    <a href="#">Why use Google!</a><br> <!-- Link to reasons for using Google -->
+                    <a href="#">Press about Google!</a><br> <!-- Link to press information -->
+                    <a href="#">Help!</a><br> <!-- Link to help section -->
+                    <a href="#">Jobs at Google</a><br> <!-- Link to job opportunities -->
+                    <a href="#">Google! Photos</a><br> <!-- Link to Google Photos -->
+                    <a href="#">Making Google! the Default</a><br> <!-- Link to instructions for setting Google as default -->
+                </td>
+                <td class="column3">
+                    Get Google!<br>updates monthly:<br> <!-- Subscription prompt -->
+                    <input type="text" name="email" value="your e-mail"><br> <!-- Input for email address -->
+                    <input type="submit" name="submit" value="Subscribe"> <!-- Subscribe button -->
+                    <a href="#">Archive</a> <!-- Link to archive -->
+                </td>
+            </tr>
+        </table>
     </div>
 
-    <div id="links" style="font-size: 12px;">
-        <div class="column">
-            <a href="#">Special Searches</a>
-            <a href="#">Stanford Search</a>
-            <a href="#">Linux Search</a>
-        </div>
-
-        <div class="column">
-            <a href="#">Web Search</a>
-            <a href="#">Press About Google!</a>
-            <a href="#">Help!</a>
-            <a href="#">Why Use Google!</a>
-            <a href="#">Company Info</a>
-            <a href="#">Jobs at Google!</a>
-            <a href="#">Google Logos!</a>
-            <a href="#">Make Google! Your Default</a>
-        </div>
-
-        <div class="column" id="subscribe">
-            <p>Get Google! updates monthly:</p>
-            <input type="email" placeholder="your email">
-            <input type="submit" value="Subscribe">
-            <a href="#">Archive</a>
-        </div>
-    </div>
-
-    <footer>
-        Copyright © 1999 Google Inc.
-    </footer>
-
+    <!-- Copyright notice -->
+    <p class="copyright">Copyright ©1999 Google Inc.</p> 
 </body>
 </html>
